@@ -18,6 +18,7 @@ class CreateCoursesTable extends Migration
             $table->string('title')->nullable();
             $table->string('description')->nullable();
             $table->string('thumbnil')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }

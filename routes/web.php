@@ -17,7 +17,7 @@ Route::get('/privacy', function () {
     return view('privacy');
 });
 Route::get('/', [App\Http\Controllers\GuestController::class, 'welcomePage'])->name('welcome');
-Route::get('/course_details/{id}', [App\Http\Controllers\GuestController::class, 'courseDetails'])->name('course_details');
+Route::get('/course_details/{slug}', [App\Http\Controllers\GuestController::class, 'courseDetails'])->name('course_details');
 
 
 Auth::routes();

@@ -17,7 +17,7 @@
         <div class="carousel-container">
           <h2 class="animate__animated animate__fadeInDown">{{$course->title}}</h2>
           <p class="animate__animated animate__fadeInUp">{{$course->description}}</p>
-          <a href="{{route('course_details',$course->id)}}" class="btn-get-started animate__animated animate__fadeInUp">বিস্তারিত জানুন</a>
+          <a href="{{route('course_details',$course->slug)}}" class="btn-get-started animate__animated animate__fadeInUp">বিস্তারিত জানুন</a>
         </div> 
       </div>
       @endforeach
@@ -66,7 +66,7 @@
 @foreach($courses as $course)
           
           <div class="col-lg-4 col-md-6 portfolio-wrap filter-app">
-          <a href="{{route('course_details',$course->id)}}">
+          <a href="{{route('course_details',$course->slug)}}">
             <div style="text-align:center" class="portfolio-item">
             <h3 style="color:#ffffff;padding:10px">{{$course->title}}</h3>
               <img src="{{'storage'.$course->thumbnil}}" class="img-fluid" alt="">

@@ -14,10 +14,10 @@ class GuestController extends Controller
         return view('welcome',compact('about'));
     }
 
-    public function courseDetails($id)
+    public function courseDetails($slug)
     {
 
-        $course = Course::with('course_details')->find($id);
+        $course = Course::with('course_details')->where('slug',$slug)->first();
         
         return view('courseDetails',compact('course'));
     }
